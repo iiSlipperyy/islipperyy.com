@@ -3,32 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iSlipperyy | Coming Soon</title>
+  <title>iSlipperyy.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0e0e0e;
-      color: #fff;
-      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      font-family: 'JetBrains Mono', monospace;
+      color: #ffffff;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      margin: 0;
       text-align: center;
     }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
     }
-    p {
-      font-size: 1.25rem;
-      color: #bbb;
+
+    .logo .brain {
+      font-size: 2.5rem;
+      color: #ff59c7;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 500px;
+      margin-top: 0;
+    }
+
+    .cursor {
+      color: #ff59c7;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50%, 100% { opacity: 1; }
+      25%, 75% { opacity: 0; }
     }
   </style>
 </head>
 <body>
-  <h1>🧠 iSlipperyy.com</h1>
-  <p>A red teamer is building something legendary...<br>Coming Soon.</p>
+  <div class="logo">
+    <span class="brain">🧠</span> iSlipperyy<span class="cursor">_</span>
+  </div>
+  <p class="subtitle">
+    A red teamer is building something legendary.  
+    <br />
+    <em>Coming Soon...</em>
+  </p>
 </body>
 </html>
