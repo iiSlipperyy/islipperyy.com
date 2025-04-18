@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iSlipperyy | Red Team Portfolio</title>
+  <title>iSlipperyy | Elijah Ali</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --background: #fdf7f1;
+      --text: #3b2f2f;
+      --highlight: #9e6f4e;
+      --accent: #c29878;
+      --button-bg: #4b3621;
+      --button-text: #fdf7f1;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,40 +23,41 @@
 
     body {
       font-family: 'Fira Code', monospace;
-      background-color: #0f0f0f;
-      color: #d1d5db;
+      background-color: var(--background);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
     h1 {
-      color: #f472b6;
       font-size: 2.5rem;
+      color: var(--highlight);
       margin-bottom: 1rem;
     }
 
-    p.description {
-      max-width: 600px;
+    .about {
+      max-width: 800px;
+      font-size: 1.05rem;
+      line-height: 1.8;
       margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #9ca3af;
+      color: var(--text);
     }
 
     .nav-buttons {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
     }
 
     .nav-buttons a {
-      background-color: #1f2937;
-      color: #f9fafb;
+      background-color: var(--button-bg);
+      color: var(--button-text);
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       text-decoration: none;
@@ -55,23 +65,26 @@
     }
 
     .nav-buttons a:hover {
-      background-color: #f472b6;
-      color: #0f0f0f;
+      background-color: var(--accent);
+      color: var(--text);
       transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
   <main>
-    <h1>🧠iSlipperyy</h1>
-    <p class="description">
-      C:\Users\iSlipperyy> whoami  
-I'm Elijah Ali — also known as <strong>iSlipperyy</strong>, a red teamer in training with a deep passion for offensive security and digital infrastructure.
-Cybersecurity wasn’t always my focus — but once I saw the world behind the screen, I never looked back. What started as curiosity quickly became obsession. I now spend my time building and attacking networks, documenting every step of the grind, and constantly leveling up.
-To me, networking is the root of everything. Without networks, there’s nothing to exploit. Nothing to defend. No signal to trace. That’s why I dove deep — studying protocols, building lab environments, and simulating real-world network traffic using open-source tools like pfSense, Zebra routers, and even physical Cisco gear.
-I build because I love it. I break because I must understand it. I document it all to share my journey.
-My goal? To become the Isaac Newton of cybersecurity and networking — discovering truths, building systems, and rewriting the rules of how we think about digital security.
-This is just the beginning. The deeper I go, the more I realize: this isn't just tech. It's my purpose.
+    <h1>🧠 iSlipperyy</h1>
+    <p class="about">
+      <code>C:\Users\iSlipperyy&gt; whoami</code><br><br>
+      I'm Elijah Ali — also known as <strong>iSlipperyy</strong>, a red teamer in training with a deep passion for offensive security and digital infrastructure.
+      <br><br>
+      Cybersecurity wasn’t always my focus — but once I saw the world behind the screen, I never looked back. What started as curiosity quickly became obsession. I now spend my time building and attacking networks, documenting every step of the grind, and constantly leveling up.
+      <br><br>
+      To me, networking is the root of everything. Without networks, there’s nothing to exploit. Nothing to defend. No signal to trace. That’s why I dove deep — studying protocols, building lab environments, and simulating real-world network traffic using open-source tools like pfSense, Zebra routers, and even physical Cisco gear.
+      <br><br>
+      I build because I love it. I break because I must understand it. I document it all to share my journey.
+      <br><br>
+      My goal? To become the Isaac Newton of cybersecurity and networking — discovering truths, building systems, and rewriting the rules of how we think about digital security. This is just the beginning. The deeper I go, the more I realize: this isn't just tech. It's my purpose.
     </p>
     <div class="nav-buttons">
       <a href="labs.html">🔬 Labs</a>
