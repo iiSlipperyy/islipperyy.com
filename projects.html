@@ -75,14 +75,21 @@
   </style>
 </head>
 <body>
-  <h1>🔧 Projects</h1>
+  <h1>Projects</h1>
   <section class="project-list">
 
     <div class="project">
       <h2>Xyber vs Oblivion Network Wargame</h2>
       <p>
-        A two-team competitive lab environment built for red-vs-blue simulations. Each team (xyber.org and oblivion.org)
-        manages its own AD, DNS, Apache server, and firewall while being routed through a core network.
+        An environment where MITM attacks can occur. Xyber and Oblivion was one of my first multi-network projects I've built.
+    Both corporates (<strong>xyber.org</strong> and <strong>oblivion.org</strong>) manage their own AD, DNS, Apache server, and firewall performing NAT — all routed through a core network.
+    This allows both organizations to communicate with one another, simulating realistic enterprise environments.
+    <br><br>
+    A Kali Linux box sits strategically between them, leveraging its position to perform man-in-the-middle attacks and intercept traffic flowing across networks.
+    <br><br>
+    This project mirrors how real-world inter-network communication works — and how attackers can exploit those flows. 
+    Click <strong>Learn More</strong> to watch a full breakdown I recorded of the entire environment.
+  </p>
       </p>
       <a href="xyber-vs-oblivion.html" class="button">Learn More</a>
     </div>
