@@ -2,65 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iSlipperyy.com</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSlipperyy | Red Team Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background-color: #0f0f0f;
-      font-family: 'JetBrains Mono', monospace;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #0e0e0e;
+      color: #d1d5db;
+      padding: 2rem;
+    }
+
+    header {
+      margin-bottom: 3rem;
       text-align: center;
     }
 
-    .logo {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .logo .brain {
+    h1 {
+      color: #f472b6;
       font-size: 2.5rem;
-      color: #ff59c7;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
-      color: #ccc;
-      max-width: 500px;
-      margin-top: 0;
+    nav {
+      margin-top: 1rem;
     }
 
-    .cursor {
-      color: #ff59c7;
-      animation: blink 1s infinite;
+    nav a {
+      color: #93c5fd;
+      margin: 0 1rem;
+      text-decoration: none;
     }
 
-    @keyframes blink {
-      0%, 50%, 100% { opacity: 1; }
-      25%, 75% { opacity: 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #1f2937;
+      padding: 1.5rem;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      transition: 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      border-color: #f472b6;
+    }
+
+    .card h2 {
+      color: #f9fafb;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #9ca3af;
     }
   </style>
 </head>
 <body>
-  <div class="logo">
-    <span class="brain">🧠</span> iSlipperyy<span class="cursor">_</span>
-  </div>
-  <p class="subtitle">
-    A red teamer is building something legendary.  
-    <br />
-    <em>Coming Soon...</em>
-  </p>
+  <header>
+    <h1>&#128126; iSlipperyy</h1>
+    <p>A red teamer documenting the grind.</p>
+    <nav>
+      <a href="#labs">Labs</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section id="labs">
+    <h2>🔬 Labs & Exploits</h2>
+    <div class="grid">
+      <div class="card">
+        <h2>Active Directory Lab</h2>
+        <p>Built a vulnerable AD environment with misconfigured GPOs and privilege escalation paths.</p>
+      </div>
+      <div class="card">
+        <h2>Apache2 Exploit Chain</h2>
+        <p>Exploited outdated Apache with RCE, used enum and lateral movement to pivot deeper.</p>
+      </div>
+      <div class="card">
+        <h2>DNS Zone Transfer Attack</h2>
+        <p>Configured a misaligned BIND DNS server and successfully transferred internal zones from Kali.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" style="margin-top: 4rem;">
+    <h2>💻 Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h2>MITRE Caldera Deployment</h2>
+        <p>Built and deployed an APT emulation lab with Caldera on a segmented network.</p>
+      </div>
+      <div class="card">
+        <h2>Pi-hole & pfSense</h2>
+        <p>Deployed Pi-hole behind pfSense with DNS logging for analysis via ELK stack.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="margin-top: 4rem;">
+    <h2>👤 About Me</h2>
+    <p style="margin-top: 1rem; max-width: 600px;">
+      I'm Elijah Ali, aka iSlipperyy — an aspiring red teamer passionate about hacking the right way. 
+      I study cyber ops, build attack labs, break things ethically, and document the journey to mastery.
+    </p>
+  </section>
 </body>
 </html>
