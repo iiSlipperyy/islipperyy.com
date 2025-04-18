@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xyber vs Oblivion | iSlipperyy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #0f1117;
+      color: #e6e6e6;
+      padding: 2rem;
+    }
 
+    h1 {
+      color: #00ffd0;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      border: 1px solid #1f6feb;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    img.diagram {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      border: 1px solid #1f6feb;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Xyber vs Oblivion Network Wargame</h1>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/QxWVHv2HZd8" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <img src="images/xyber-vs-oblivion.png" alt="Xyber vs Oblivion Network Diagram" class="diagram" />
+
+    <p>
+      This project was one of the first multi-network environments I built — a full red vs. blue simulation across two organizations:
+      <strong>Xyber.org</strong> and <strong>Oblivion.org</strong>. Each domain has its own Active Directory, DNS, Apache server,
+      and firewall performing NAT. These networks route through a central core router and are fully segmented via VLANs and static
+      routes, closely mirroring enterprise-level infrastructure.
+    </p>
+
+    <p>
+      Sitting in between them is a Kali Linux box — aware of the routing paths, enabling it to perform man-in-the-middle attacks.
+      The goal was to simulate real-world inter-network communication, while demonstrating how attackers can intercept and manipulate
+      traffic between corporate environments. This lab taught me the importance of visibility, segmentation, and detection.
+    </p>
+  </div>
+</body>
+</html>
