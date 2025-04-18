@@ -11,6 +11,8 @@
       --text: #3b2f2f;
       --highlight: #9e6f4e;
       --accent: #c29878;
+      --terminal-green: #00c700;
+      --command-gray: #2e2e2e;
       --button-bg: #4b3621;
       --button-text: #fdf7f1;
     }
@@ -31,21 +33,30 @@
       justify-content: center;
       min-height: 100vh;
       padding: 3rem 1rem;
-      text-align: center;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      color: var(--highlight);
-      margin-bottom: 1rem;
-    }
-
-    .about {
+    .terminal {
+      background-color: var(--command-gray);
+      color: var(--terminal-green);
+      padding: 2rem;
+      border-radius: 8px;
+      width: 100%;
       max-width: 800px;
-      font-size: 1.05rem;
-      line-height: 1.8;
       margin-bottom: 2rem;
-      color: var(--text);
+    }
+
+    .command {
+      color: #00ff00;
+    }
+
+    .response {
+      color: #ffffff;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+
+    strong {
+      color: var(--accent);
     }
 
     .nav-buttons {
@@ -73,19 +84,21 @@
 </head>
 <body>
   <main>
-    <h1>🧠 iSlipperyy</h1>
-    <p class="about">
-      <code>C:\Users\iSlipperyy&gt; whoami</code><br><br>
-      I'm Elijah Ali — also known as <strong>iSlipperyy</strong>, a red teamer in training with a deep passion for offensive security and digital infrastructure.
-      <br><br>
-      Cybersecurity wasn’t always my focus — but once I saw the world behind the screen, I never looked back. What started as curiosity quickly became obsession. I now spend my time building and attacking networks, documenting every step of the grind, and constantly leveling up.
-      <br><br>
-      To me, networking is the root of everything. Without networks, there’s nothing to exploit. Nothing to defend. No signal to trace. That’s why I dove deep — studying protocols, building lab environments, and simulating real-world network traffic using open-source tools like pfSense, Zebra routers, and even physical Cisco gear.
-      <br><br>
-      I build because I love it. I break because I must understand it. I document it all to share my journey.
-      <br><br>
-      My goal? To become the Isaac Newton of cybersecurity and networking — discovering truths, building systems, and rewriting the rules of how we think about digital security. This is just the beginning. The deeper I go, the more I realize: this isn't just tech. It's my purpose.
-    </p>
+    <div class="terminal">
+      <div class="command">C:\Users\iSlipperyy&gt; whoami</div>
+      <div class="response">
+        I'm Elijah Ali — also known as <strong>iSlipperyy</strong>, a red teamer in training with a deep passion for offensive security and digital infrastructure.
+        <br><br>
+        Cybersecurity wasn’t always my focus — but once I saw the world behind the screen, I never looked back. What started as curiosity quickly became obsession. I now spend my time building and attacking networks, documenting every step of the grind, and constantly leveling up.
+        <br><br>
+        To me, networking is the root of everything. Without networks, there’s nothing to exploit. Nothing to defend. No signal to trace. That’s why I dove deep — studying protocols, building lab environments, and simulating real-world network traffic using open-source tools like pfSense, Zebra routers, and even physical Cisco gear.
+        <br><br>
+        I build because I love it. I break because I must understand it. I document it all to share my journey.
+        <br><br>
+        My goal? To become the Isaac Newton of cybersecurity and networking — discovering truths, building systems, and rewriting the rules of how we think about digital security. This is just the beginning. The deeper I go, the more I realize: this isn't just tech. It's my purpose.
+      </div>
+    </div>
+
     <div class="nav-buttons">
       <a href="labs.html">🔬 Labs</a>
       <a href="projects.html">🛠️ Projects</a>
